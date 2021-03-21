@@ -18,5 +18,6 @@
     height: 26px;
     top: -45px;
     right: 10px;
+    background-image: url(../../../images/close-btn_small.svg);
   }
 }

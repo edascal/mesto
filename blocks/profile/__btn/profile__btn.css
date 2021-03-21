@@ -1,0 +1,7 @@
+.profile__btn {
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  flex-shrink: 0;
+}

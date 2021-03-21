@@ -5,12 +5,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #000;
-  border: none;
-  cursor: pointer;
   margin-left: 18px;
-  flex-shrink: 0;
-  outline: none;
 }
 
 @media screen and (max-width: 650px) {
