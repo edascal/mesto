@@ -9,8 +9,7 @@
   <body class="page">
     <div class="page__container">
       <header class="header">
-        <img class="header__logo" src="./images/logo.svg" alt="Логотип" />
-        <div class="header__line"></div>
+        <div class="header__logo"></div>
       </header>
 
       <main class="content">
@@ -19,13 +18,13 @@
             <img src="./images/avatar.jpg" class="profile__image" alt="Аватар" />
             <div class="profile__info">
               <div class="profile__info-description">
-                <h2 class="profile__info-name">Жак-Ив Кусто</h2>
+                <h1 class="profile__info-name">Жак-Ив Кусто</h1>
                 <p class="profile__info-job">Исследователь океана</p>
               </div>
-              <button class="profile__btn profile__btn-edit btn-hover" type="button"></button>
+              <button class="profile__btn profile__btn-edit" type="button"></button>
             </div>
           </div>
-          <button class="profile__btn profile__btn-add btn-hover" type="button"></button>
+          <button class="profile__btn profile__btn-add" type="button"></button>
         </section>
 
         <section class="cards">
@@ -34,7 +33,7 @@
               <img class="card__image" src="./images/card_images/karaciaevsk.jpg" alt="Карачаевск" />
               <div class="card__description">
                 <h3 class="card__name">Карачаевск</h3>
-                <button class="card__icon"></button>
+                <button class="card__icon" type="button"></button>
               </div>
             </li>
 
@@ -42,7 +41,7 @@
               <img class="card__image" src="./images/card_images/elbrus.jpg" alt="Гора Эльбрус" />
               <div class="card__description">
                 <h3 class="card__name">Гора Эльбрус</h3>
-                <button class="card__icon"></button>
+                <button class="card__icon" type="button"></button>
               </div>
             </li>
 
@@ -50,7 +49,7 @@
               <img class="card__image" src="./images/card_images/dombai.jpg" alt="Гора Домбай" />
               <div class="card__description">
                 <h3 class="card__name">Домбай</h3>
-                <button class="card__icon"></button>
+                <button class="card__icon" type="button"></button>
               </div>
             </li>
 
@@ -58,7 +57,7 @@
               <img class="card__image" src="./images/card_images/elbrus.jpg" alt="Гора Эльбрус" />
               <div class="card__description">
                 <h3 class="card__name">Гора Эльбрус</h3>
-                <button class="card__icon"></button>
+                <button class="card__icon" type="button"></button>
               </div>
             </li>
 
@@ -66,7 +65,7 @@
               <img class="card__image" src="./images/card_images/dombai.jpg" alt="Гора Домбай" />
               <div class="card__description">
                 <h3 class="card__name">Домбай</h3>
-                <button class="card__icon"></button>
+                <button class="card__icon" type="button"></button>
               </div>
             </li>
 
@@ -74,7 +73,7 @@
               <img class="card__image" src="./images/card_images/karaciaevsk.jpg" alt="Карачаевск" />
               <div class="card__description">
                 <h3 class="card__name">Карачаевск-Черкесск</h3>
-                <button class="card__icon"></button>
+                <button class="card__icon" type="button"></button>
               </div>
             </li>
           </ul>
@@ -88,12 +87,12 @@
       <div class="popup">
         <div class="popup__overlay"></div>
         <div class="popup__content">
-          <button class="popup__btn-close btn-hover" type="button"></button>
+          <button class="popup__btn-close" type="button"></button>
           <h3 class="popup__title">Редактировать профиль</h3>
-          <form class="popup__form">
-            <input type="text" class="popup__input popup__input-name" />
-            <input type="text" class="popup__input popup__input-job" />
-            <button class="popup__btn-save btn-hover" type="submit">Сохранить</button>
+          <form class="popup__form" name="edit-form">
+            <input type="text" class="popup__input popup__input_type_name" name="user-name" />
+            <input type="text" class="popup__input popup__input_type_job" name="user-job" />
+            <button class="popup__btn-save" type="submit">Сохранить</button>
           </form>
         </div>
       </div>

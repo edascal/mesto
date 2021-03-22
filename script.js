@@ -8,15 +8,15 @@ let closeBtn = popup.querySelector('.popup__btn-close');
 let infoName = document.querySelector('.profile__info-name');
 let infoJob = document.querySelector('.profile__info-job');
 
-let inputName = popup.querySelector('.popup__input-name');
-let inputJob = popup.querySelector('.popup__input-job');
+let inputName = popup.querySelector('.popup__input_type_name');
+let inputJob = popup.querySelector('.popup__input_type_job');
 
 function openPopup() {
-  popup.classList.add('popup__opened');
+  popup.classList.add('popup_opened');
 }
 
 function closePopup() {
-  popup.classList.remove('popup__opened');
+  popup.classList.remove('popup_opened');
 }
 
 function editProfile() {

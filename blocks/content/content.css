@@ -1,0 +1,11 @@
+@media screen and (max-width: 920px) {
+  .content {
+    margin: 0 40px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .content {
+    margin: 0 20px;
+  }
+}
