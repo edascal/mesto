@@ -29,53 +29,16 @@
 
         <section class="cards">
           <ul class="card">
-            <li class="card__item">
-              <img class="card__image" src="./images/card_images/karaciaevsk.jpg" alt="Карачаевск" />
-              <div class="card__description">
-                <h3 class="card__name">Карачаевск</h3>
-                <button class="card__icon" type="button"></button>
-              </div>
-            </li>
-
-            <li class="card__item">
-              <img class="card__image" src="./images/card_images/elbrus.jpg" alt="Гора Эльбрус" />
-              <div class="card__description">
-                <h3 class="card__name">Гора Эльбрус</h3>
-                <button class="card__icon" type="button"></button>
-              </div>
-            </li>
-
-            <li class="card__item">
-              <img class="card__image" src="./images/card_images/dombai.jpg" alt="Гора Домбай" />
-              <div class="card__description">
-                <h3 class="card__name">Домбай</h3>
-                <button class="card__icon" type="button"></button>
-              </div>
-            </li>
-
-            <li class="card__item">
-              <img class="card__image" src="./images/card_images/elbrus.jpg" alt="Гора Эльбрус" />
-              <div class="card__description">
-                <h3 class="card__name">Гора Эльбрус</h3>
-                <button class="card__icon" type="button"></button>
-              </div>
-            </li>
-
-            <li class="card__item">
-              <img class="card__image" src="./images/card_images/dombai.jpg" alt="Гора Домбай" />
-              <div class="card__description">
-                <h3 class="card__name">Домбай</h3>
-                <button class="card__icon" type="button"></button>
-              </div>
-            </li>
-
-            <li class="card__item">
-              <img class="card__image" src="./images/card_images/karaciaevsk.jpg" alt="Карачаевск" />
-              <div class="card__description">
-                <h3 class="card__name">Карачаевск-Черкесск</h3>
-                <button class="card__icon" type="button"></button>
-              </div>
-            </li>
+            <template id="add-template">
+              <li class="card__item">
+                <img class="card__image" src="./images/1x1_placeholder.png" alt="Точка" />
+                <div class="card__description">
+                  <h3 class="card__name"></h3>
+                  <button class="card__icon card__icon_like" type="button"></button>
+                </div>
+                <button class="card__icon card__icon_delete" type="button"></button>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -83,21 +46,47 @@
       <footer class="footer">
         <span class="footer__copyright">&copy; 2021 Mesto Russia</span>
       </footer>
+    </div>
 
-      <div class="popup">
-        <div class="popup__overlay"></div>
-        <div class="popup__content">
-          <button class="popup__btn-close" type="button"></button>
-          <h3 class="popup__title">Редактировать профиль</h3>
-          <form class="popup__form" name="edit-form">
-            <input type="text" class="popup__input popup__input_type_name" name="user-name" />
-            <input type="text" class="popup__input popup__input_type_job" name="user-job" />
-            <button class="popup__btn-save" type="submit">Сохранить</button>
-          </form>
-        </div>
+    <div class="popup popup_edit-profile">
+      <div class="popup__overlay"></div>
+      <div class="popup__content">
+        <button class="popup__btn-close" type="button"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="edit-form">
+          <input type="text" class="popup__input popup__input_type_name" name="user-name" />
+          <input type="text" class="popup__input popup__input_type_job" name="user-job" />
+          <button class="popup__btn-save" type="submit">Сохранить</button>
+        </form>
       </div>
     </div>
 
-    <script src="./script/script.js"></script>
+    <div class="popup popup_add-place">
+      <div class="popup__overlay"></div>
+      <div class="popup__content">
+        <button class="popup__btn-close" type="button"></button>
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="add-form">
+          <input type="text" class="popup__input popup__input_type_place" name="place" placeholder="Название" />
+          <input type="text" class="popup__input popup__input_type_link" name="link" placeholder="Ссылка на картинку" />
+          <button class="popup__btn-save" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_card-preview">
+      <div class="popup__overlay"></div>
+      <div class="popup__content card-preview">
+        <button class="popup__btn-close"></button>
+        <img class="card-preview__image" src="./images/1x1_placeholder.png" alt="Точка" />
+        <h3 class="card-preview__title"></h3>
+      </div>
+    </div>
+
+    <script src="script/common.js"></script>
+    <script src="./script/editProfile.js"></script>
+    <script src="./script/addPlace.js"></script>
+    <script src="./script/addCards.js"></script>
+    <script src="./script/cardPreview.js"></script>
   </body>
 </html>

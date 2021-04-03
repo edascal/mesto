@@ -1,0 +1,8 @@
+.card-preview {
+  padding: 0;
+  background: none;
+  width: 75vw;
+  max-width: 75vw;
+  height: 75vh;
+  max-height: 75vh;
+}
