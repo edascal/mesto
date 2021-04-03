@@ -27,7 +27,7 @@ const initialCards = [
   },
 ];
 
-function addCard(name, link) {
+function createCard(name, link) {
   const cardTemplate = document.querySelector('#add-template').content;
   const cardItem = cardTemplate.querySelector('.card__item').cloneNode(true);
   const cardImage = cardItem.querySelector('.card__image');
@@ -50,7 +50,16 @@ function addCard(name, link) {
     e.target.classList.toggle('card__icon_like_active');
   });
 
+  return cardItem;
+}
+
+function renderCard(cardItem) {
   card.prepend(cardItem);
+}
+
+function addCard(name, link) {
+  const newCard = createCard(name, link);
+  renderCard(newCard);
 }
 
 document.addEventListener('DOMContentLoaded', function () {

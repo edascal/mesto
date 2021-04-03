@@ -12,6 +12,8 @@ const inputName = editPopup.querySelector('.popup__input_type_name');
 const inputJob = editPopup.querySelector('.popup__input_type_job');
 
 function openEditPopup() {
+  resetProfileForm();
+
   openPopup(editPopup);
 }
 
@@ -19,11 +21,9 @@ function closeEditPopup() {
   closePopup(editPopup);
 }
 
-function editProfile() {
+function resetProfileForm() {
   inputName.value = infoName.textContent;
   inputJob.value = infoJob.textContent;
-
-  openEditPopup();
 }
 
 function saveProfile(e) {
@@ -35,7 +35,7 @@ function saveProfile(e) {
   closeEditPopup();
 }
 
-editBtn.addEventListener('click', editProfile);
+editBtn.addEventListener('click', openEditPopup);
 editFormPopup.addEventListener('submit', saveProfile);
 
 closePopupEditForm.addEventListener('click', closeEditPopup);

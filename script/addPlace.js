@@ -9,6 +9,8 @@ const inputPlace = addPopup.querySelector('.popup__input_type_place');
 const inputLink = addPopup.querySelector('.popup__input_type_link');
 
 function openAddPopup() {
+  resetPlaceForm();
+
   openPopup(addPopup);
 }
 
@@ -16,11 +18,9 @@ function closeAddPopup() {
   closePopup(addPopup);
 }
 
-function addPlace() {
+function resetPlaceForm() {
   inputPlace.value = '';
   inputLink.value = '';
-
-  openAddPopup();
 }
 
 function savePlace(e) {
@@ -34,7 +34,7 @@ function savePlace(e) {
   closeAddPopup();
 }
 
-addBtn.addEventListener('click', addPlace);
+addBtn.addEventListener('click', openAddPopup);
 addPlaceFormPopup.addEventListener('submit', savePlace);
 
 closeAddPlaceForm.addEventListener('click', closeAddPopup);
