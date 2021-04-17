@@ -53,9 +53,31 @@
       <div class="popup__content">
         <button class="popup__btn-close" type="button"></button>
         <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__form" name="edit-form">
-          <input type="text" class="popup__input popup__input_type_name" name="user-name" />
-          <input type="text" class="popup__input popup__input_type_job" name="user-job" />
+        <form class="popup__form" name="editProfileForm" novalidate>
+          <label class="popup__form-field">
+            <input
+              type="text"
+              class="popup__input popup__input_type_name"
+              name="userName"
+              id="user-name"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span class="popup__input-error user-name-error"></span>
+          </label>
+          <label class="popup__form-field">
+            <input
+              type="text"
+              class="popup__input popup__input_type_job"
+              name="userJob"
+              id="user-job"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span class="popup__input-error user-job-error"></span>
+          </label>
           <button class="popup__btn-save" type="submit">Сохранить</button>
         </form>
       </div>
@@ -66,10 +88,32 @@
       <div class="popup__content">
         <button class="popup__btn-close" type="button"></button>
         <h3 class="popup__title">Новое место</h3>
-        <form class="popup__form" name="add-form">
-          <input type="text" class="popup__input popup__input_type_place" name="place" placeholder="Название" />
-          <input type="text" class="popup__input popup__input_type_link" name="link" placeholder="Ссылка на картинку" />
-          <button class="popup__btn-save" type="submit">Сохранить</button>
+        <form class="popup__form" name="addPlaceForm" novalidate>
+          <label class="popup__form-field">
+            <input
+              type="text"
+              class="popup__input popup__input_type_place"
+              name="placeName"
+              id="place-name"
+              placeholder="Название"
+              minlength="2"
+              maxlength="30"
+              required
+            />
+            <span class="popup__input-error place-name-error"></span>
+          </label>
+          <label class="popup__form-field">
+            <input
+              type="url"
+              class="popup__input popup__input_type_link"
+              name="placeLink"
+              id="place-link"
+              placeholder="Ссылка на картинку"
+              required
+            />
+            <span class="popup__input-error place-link-error"></span>
+          </label>
+          <button class="popup__btn-save" type="submit">Создать</button>
         </form>
       </div>
     </div>
@@ -84,9 +128,10 @@
     </div>
 
     <script src="script/common.js"></script>
-    <script src="./script/editProfile.js"></script>
-    <script src="./script/addPlace.js"></script>
+    <script src="./script/editProfileForm.js"></script>
+    <script src="./script/addPlaceForm.js"></script>
     <script src="./script/addCards.js"></script>
     <script src="./script/cardPreview.js"></script>
+    <script src="./script/validate.js"></script>
   </body>
 </html>

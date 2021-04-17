@@ -9,6 +9,14 @@
   margin-top: 20px;
 }
 
-.popup__btn-save:hover {
+.popup__btn-save:hover:not(:disabled) {
   opacity: 0.8;
+}
+
+.popup__btn-save:disabled {
+  background-color: #fff;
+  color: #c4c4c4;
+  border: 1px solid #c4c4c4;
+  cursor: default;
+  border-radius: 2px;
 }

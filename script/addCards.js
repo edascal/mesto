@@ -43,7 +43,7 @@ function createCard(name, link) {
   });
 
   cardImage.addEventListener('click', function () {
-    preview(link, name);
+    openCardPreview(link, name);
   });
 
   likeBtn.addEventListener('click', function (e) {

@@ -5,7 +5,7 @@ const cardPreviewImage = cardPreview.querySelector('.card-preview__image');
 const cardPreviewTitle = cardPreview.querySelector('.card-preview__title');
 const closeBtn = cardPreview.querySelector('.popup__btn-close');
 
-function openCardPreview() {
+function openCardPreviewPopup() {
   openPopup(cardPreview);
 }
 
@@ -13,13 +13,19 @@ function closeCardPreview() {
   closePopup(cardPreview);
 }
 
-function preview(image, title) {
+function cardPreviewKeyDown(evt) {
+  handleKeyDown(evt, cardPreview);
+}
+
+function openCardPreview(image, title) {
   cardPreviewImage.src = image;
   cardPreviewImage.alt = title;
   cardPreviewTitle.textContent = title;
 
-  openCardPreview();
+  openCardPreviewPopup();
 }
 
 closeBtn.addEventListener('click', closeCardPreview);
 cardPreviewOverlay.addEventListener('click', closeCardPreview);
+
+document.addEventListener('keydown', cardPreviewKeyDown);
