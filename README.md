@@ -10,7 +10,5 @@
 - Media Quaries
 - БЭМ
 - JavaScript
-
-## Ссылка на проект
-
-https://edascal.github.io/mesto/
+- Webpack
+- PostCSS

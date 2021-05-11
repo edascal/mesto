@@ -1,9 +1,8 @@
-import { openPopup } from './popup.js';
-
-export class Card {
-  constructor(name, link) {
+export default class Card {
+  constructor(name, link, handleCardClick) {
     this._name = name;
     this._link = link;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate() {
@@ -26,20 +25,8 @@ export class Card {
     });
 
     cardImage.addEventListener('click', () => {
-      this._handleOpenPopup();
+      this._handleCardClick(this._name, this._link);
     });
-  }
-
-  _handleOpenPopup() {
-    const cardPreview = document.querySelector('.popup_type_card-preview');
-    const cardPreviewImage = cardPreview.querySelector('.card-preview__image');
-    const cardPreviewTitle = cardPreview.querySelector('.card-preview__title');
-
-    cardPreviewImage.src = this._link;
-    cardPreviewImage.alt = this._name;
-    cardPreviewTitle.textContent = this._name;
-
-    openPopup(cardPreview);
   }
 
   generateCard() {
