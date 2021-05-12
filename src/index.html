@@ -32,7 +32,7 @@
 
         <section class="cards">
           <ul class="card">
-            <template id="add-template">
+            <template id="card-template">
               <li class="card__item">
                 <img class="card__image" src="./images/1x1_placeholder.png" alt="Точка" />
                 <div class="card__description">
@@ -65,6 +65,7 @@
               id="user-name"
               minlength="2"
               maxlength="40"
+              placeholder="Имя"
               required
             />
             <span class="popup__input-error user-name-error"></span>
@@ -77,6 +78,7 @@
               id="user-job"
               minlength="2"
               maxlength="200"
+              placeholder="Вид деятельности"
               required
             />
             <span class="popup__input-error user-job-error"></span>
@@ -116,7 +118,7 @@
             />
             <span class="popup__input-error place-link-error"></span>
           </label>
-          <button class="popup__btn-save" type="submit">Создать</button>
+          <button class="popup__btn-save" type="submit" disabled>Создать</button>
         </form>
       </div>
     </article>

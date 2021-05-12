@@ -25,12 +25,28 @@ export const initialCards = [
   },
 ];
 
-export const editBtn = document.querySelector('.profile__btn_type_edit');
+export const editProfileButton = document.querySelector('.profile__btn_type_edit');
 
 export const editProfileForm = document.forms.editProfileForm;
 export const userName = editProfileForm.elements.userName;
 export const userJob = editProfileForm.elements.userJob;
 
-export const addPlaceBtn = document.querySelector('.profile__btn_type_add');
+export const addPlaceButton = document.querySelector('.profile__btn_type_add');
 
 export const addPlaceForm = document.forms.addPlaceForm;
+
+export const selectors = {
+  profileName: '.profile__info-name',
+  profileJob: '.profile__info-job',
+  editProfilePopup: '.popup_type_edit-profile',
+  popupInput: '.popup__input',
+  popupSaveButton: '.popup__btn-save',
+  addPlacePopup: '.popup_type_add-place',
+  cardPreviewPopup: '.popup_type_card-preview',
+  cardTemplate: '#card-template',
+};
+
+export const classes = {
+  popupInputError: 'popup__input_type_error',
+  popupInputErrorActive: 'popup__input-error_active',
+};
