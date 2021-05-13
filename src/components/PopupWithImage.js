@@ -6,9 +6,13 @@ export default class PopupWithImage extends Popup {
   }
 
   open(name, url) {
-    this._popupElement.querySelector('.card-preview__image').src = url;
-    this._popupElement.querySelector('.card-preview__title').textContent = name;
-    this._popupElement.querySelector('.card-preview__image').alt = name;
+    const cardPreviewImage = this._popupElement.querySelector('.card-preview__image');
+    const cardPreviewTitle = this._popupElement.querySelector('.card-preview__title');
+
+    cardPreviewImage.src = url;
+    cardPreviewImage.alt = name;
+    cardPreviewTitle.textContent = name;
+
     super.open();
   }
 }

@@ -67,7 +67,7 @@ const cardValidation = new FormValidator(addPlaceForm, {
 
 cardValidation.enableValidation();
 
-const cardSection = new Section({ items: initialCards, renderer: createCard }, '.card');
+const cardSection = new Section({ items: initialCards, renderer: createCard }, selectors.card);
 
 function cardImageClickHandler(name, url) {
   popupWithImage.open(name, url);

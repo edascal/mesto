@@ -43,6 +43,7 @@ export const selectors = {
   popupSaveButton: '.popup__btn-save',
   addPlacePopup: '.popup_type_add-place',
   cardPreviewPopup: '.popup_type_card-preview',
+  card: '.card',
   cardTemplate: '#card-template',
 };
 
